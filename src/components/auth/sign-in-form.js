@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { reduxForm, Field } from 'redux-form';
 
+import { FormInput } from '../form-fields';
+
 class SignInForm extends Component {
     render(){
 
@@ -9,7 +11,20 @@ class SignInForm extends Component {
 
         return (
             <form className={`${className} sign-in-form`}>
-                Sign In
+                <Field className='sign-in-form-email' 
+                title="Email"
+                type="email"
+                placeholder="Email"
+                name="email" 
+                component={FormInput}/>
+
+                 <Field className='sign-in-form-password' 
+                title="Password"
+                type="password"
+                placeholder="Password"
+                name="password" 
+                component={FormInput}/>
+
             </form>
         )
     }
