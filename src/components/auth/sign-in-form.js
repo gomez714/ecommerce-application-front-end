@@ -25,6 +25,7 @@ class SignInForm extends Component {
                 name="password" 
                 component={FormInput}/>
 
+                <div className="sign-in-form-line"></div>
                 
                 <Field className='sign-in-form-login' 
                 onClick={() => console.log("Trying to submit")}

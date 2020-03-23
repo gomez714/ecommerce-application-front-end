@@ -10,8 +10,14 @@ html {
     box-sizing: inherit;
 }
 
+body {
+    font-family: 'Open Sans';
+    color: #808080;
+}
+
 @import './layout.scss';
 @import './header-navbar.scss';
 @import './auth/sign-in.scss';
 @import './auth/sign-up.scss';
 @import './page-title.scss';
+@import './form-fields.scss';
