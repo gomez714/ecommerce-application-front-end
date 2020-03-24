@@ -8,8 +8,9 @@
 
     &__form {
         display: grid;
-        grid-template-rows: [email-s] 64px [email-e password-s] 64px [password-e] minmax(20px, 289px) [line-s] 2px [line-e login-s] 38px [login-e];
-        grid-template-columns: 1fr;
+        grid-template-rows: [name-s] 64px [name-e email-s] 64px [email-e space-s] 35px [space-e password-s] 64px [password-e confirm-s] 64px [confirm-e] minmax(20px, 81px) [line-s] 26px [line-e buttons-s] 38px [buttons-e];
+        grid-template-columns: [back-s] 137px [back-e space-s] 40px [space-e create-s] 1fr [create-e] 1fr;
+        grid-row-gap: 15px;
     }
 }
 
@@ -17,6 +18,10 @@
 
     & > * {
         grid-column: 1/-1;
+    }
+
+    &-name {
+        grid-row: name-s/name-e;
     }
 
     &-email {
@@ -29,14 +34,26 @@
 
     }
 
+    &-confirm{
+        margin-top: 15px;
+        grid-row: confirm-s/confirm-e;
+
+    }
+
     &-line {
         grid-row: line-s/line-e;
         border-top: 1px solid #cccccc;
     }
 
     &-login {
-        grid-row: login-s/login-e;
-        margin-top: 39px;
+        grid-row: buttons-s/buttons-e;
+        grid-column: create-s/create-e;
+
+    }
+
+    &-back{
+        grid-column: back-s/back-e;
+        grid-row: buttons-s/buttons-e;
 
     }
     &-details {

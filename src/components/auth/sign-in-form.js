@@ -49,7 +49,7 @@ class SignInForm extends Component {
                 <div className="sign-in-form-line"></div>
                 
                 <Field className='sign-in-form-login' 
-                onClick={() => console.log("Trying to submit")}
+                onClick={() => history.push('/account')}
                 title="Login"
                 type="submit"
                 placeholder="Login"

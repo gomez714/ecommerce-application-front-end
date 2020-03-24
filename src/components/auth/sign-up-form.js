@@ -12,21 +12,18 @@ class SignUpForm extends Component {
 
         const { className, handleSubmit } = this.props;
 
-        const links = [
+        const info = [
             {
                 id: 0,
-                title: 'Not Registered? Create account here',
-                onClick: () => history.push('/sign-up')
+                title: 'At least 6 characters',
             },
             {
                 id: 1,
-                title: 'Forgot account email?',
-                onClick: () => console.log('Forgot email!')
+                title: 'At least one number',
             },
             {
                 id: 2,
-                title: 'Forgot password?',
-                onClick: () => console.log('Forgot password!')
+                title: 'At least one symbol',
             }
         ]
 
@@ -54,7 +51,7 @@ class SignUpForm extends Component {
                 name="password" 
                 component={FormInput}/>
 
-                <Field className='sign-up-form-confirm-password' 
+                <Field className='sign-up-form-confirm' 
                 title="Confirm Password"
                 type="password"
                 placeholder="Confirm Password"
@@ -64,23 +61,21 @@ class SignUpForm extends Component {
                 <div className="sign-up-form-line"></div>
                 
                 <Field className='sign-up-form-login' 
-                onClick={() => console.log("Trying to submit")}
-                title="Login"
+                onClick={() => history.push('/account')}
+                title="Create Acount"
                 type="submit"
-                placeholder="Login"
                 name="login" 
                 component={FormButton}/>
 
                 <Field className='sign-up-form-back' 
-                onClick={() => console.log("Trying to go back!")}
+                onClick={() => history.push('/sign-in')}
                 title="Back"
                 type="button"
-                placeholder="Back"
                 short={true}
                 name="back" 
                 component={FormButton}/>
 
-                <Details className='sign-up-form-details' title='QuickLinks' links={links}/>
+                <Details className='sign-up-form-details' title='Password Requirements' info={info}/>
             </form>
         )
     }
