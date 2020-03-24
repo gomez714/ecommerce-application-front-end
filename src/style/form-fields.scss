@@ -29,6 +29,7 @@
         width: 243px;
         border-radius: 20px;
         background-color: #00cb79;
+        
         font-size: 16px;
         color: white;
 
@@ -36,4 +37,10 @@
             outline: none;
         }
     }
+
+    &-gray-button {
+        background-color: #999;
+        width: 137px;
+    }
+
 }
