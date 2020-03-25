@@ -21,8 +21,78 @@
     
         }
     
-        .purchase-details{
-    
+        .purchase-detail{
+            display: grid;
+            width: 600px;
+            grid-template-columns: [s] 1fr [m] 1fr [e];
+            grid-template-rows: [s] 1fr [sm] 1fr [m-s] 25px [m-e] 1fr [me] 1fr [e];
+
+            &-order-number {
+                grid-column: s/m;
+                grid-row: s/sm;
+            }
+            &-order-date {
+                grid-column: s/m;
+                grid-row: sm/m-s;
+            }
+            &-shipping-address {
+                grid-column: s/m;
+                grid-row: m-e/e;
+            }
+            &-total {
+                grid-column: m/e;
+                grid-row: sm/m-s;
+
+            }
+            &-credit-card{
+                grid-column: m/e;
+                grid-row: s/sm;
+
+            }
+            &-track-shipment {
+                grid-row: m-e/me;
+                grid-column: m/e;
+            }
+            &-print-receipt{
+                grid-row: me/e;
+                grid-column: m/e;
+            }
+            &-track-shipment,
+            &-print-receipt{
+                color: #00cb79;
+                font-size: 14px;
+                font-weight: 600;
+                text-decoration: underline;
+                width: 150px;
+                justify-self: center;
+               
+
+            }
+
+
+            .purchase-detail-label {
+                display: grid;
+                grid-template-rows: [s] 1fr [e];
+                grid-template-columns: [s] 1fr [m] 1fr [e];
+                grid-gap: 10px;
+
+                & > * {
+                    grid-row: s/e;
+                }
+
+                &-label{
+                    grid-column: s/m;
+                    text-align: right;
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+
+                &-value {
+                    grid-column: m/e;
+                    color: #666;
+                    font-size: 14px;
+                }
+            }
         }
     }
 

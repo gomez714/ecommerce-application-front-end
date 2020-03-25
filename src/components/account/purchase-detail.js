@@ -40,6 +40,10 @@ class PurchaseDetail extends Component {
                 title='Credit Card'
                 value={creditCard}/>
 
+                <a className='purchase-detail-track-shipment'>Track Shipment</a>
+                <a className='purchase-detail-print-receipt'>Print Receipt</a>
+
+                
 
             </div>
         )
