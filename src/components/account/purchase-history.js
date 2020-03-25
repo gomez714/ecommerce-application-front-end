@@ -4,7 +4,7 @@ class PurchaseHistory extends Component {
     render(){
         return(
             <div>
-
+                PurchaseHistory
             </div>
         )
     }
