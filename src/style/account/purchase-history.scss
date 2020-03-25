@@ -6,16 +6,28 @@
 
     }
 
+    
+    &-content{
+        margin: 37px 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .purchases {
+            
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 80px);
+            width: 360px;
+            grid-gap: 10px;
+    
+        }
+    
+        .purchase-details{
+    
+        }
+    }
+
     &-border-bottom{
         border-bottom: 1px solid #f2f2f2;
-
     }
-
-    .purchases {
-
-    }
-
-    .purchase-details{
-
-    }
+    
 }

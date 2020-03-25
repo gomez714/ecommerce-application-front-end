@@ -14,11 +14,13 @@ class Purchases extends Component {
         const { className } = this.props;
 
         return(
-            <div className={`${className}purchases`}>
+            <div className={`${className} purchases`}>
                 {
                     this.props.purchases.map( purchase => {
                         return (
-                            <div>{purchase.title}</div>
+                            <div key={purchase.id} className='purchases-purchase purchase'>
+                                <img className="purchase-image" src="http://via.placeholder.com/80x80" />
+                            </div>
                         )
                     })
                 }
