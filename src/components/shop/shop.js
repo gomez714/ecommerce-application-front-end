@@ -7,7 +7,7 @@ import * as actions from '../../actions';
 class Shop extends Component {
 
     componentDidMount(){
-        // Fetch shop products action creator
+        
         const headerLinks = [
             {
                 id: 0,
@@ -18,11 +18,12 @@ class Shop extends Component {
         ]
         this.props.setHeaderLinks(headerLinks);
         
-        this.props.fetchShopCategories();
         
         // Fetch navbar links
             // Set navbar links
             // Filter products with links
+
+        this.props.fetchShopProducts();
     }
     render(){
         return(
