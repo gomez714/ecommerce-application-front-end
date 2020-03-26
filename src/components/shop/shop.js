@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import * as actions from '../../actions';
 import ShopSearchBar from './shop-searchbar';
+import ShopProduct from './shop-product';
 
 class Shop extends Component {
 
@@ -41,14 +42,7 @@ class Shop extends Component {
                 <div className="shop-filteredProducts">
                     {this.props.filteredProducts.map(product => {
                         return(
-                            <div key={product.id} className='shop-product'>
-                                <div className='shop-product-title'>
-                                    {product.title}
-                                </div>
-                                <div className='shop-product-description'>
-                                    {product.description}
-                                </div>
-                            </div>
+                            <ShopProduct {...product} key={product.id} />
                         )
                     })}
                 </div>
