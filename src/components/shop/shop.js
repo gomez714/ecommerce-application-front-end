@@ -18,11 +18,6 @@ class Shop extends Component {
         ]
         this.props.setHeaderLinks(headerLinks);
         this.props.fetchShopCategories();
-        
-        
-        // Fetch navbar links
-            // Set navbar links
-            // Filter products with links
 
         this.props.fetchShopProducts();
     }
@@ -38,7 +33,21 @@ class Shop extends Component {
         return(
             <div className='shop'>
                 {/* Search-bar Component */}
-                {/* Shop Product */}
+                <div className="shop-filteredProducts">
+                    {this.props.filteredProducts.map(product => {
+                        return(
+                            <div key={product.id} className='shop-product'>
+                                <div className='shop-product-title'>
+                                    {product.title}
+                                </div>
+                                <div className='shop-product-description'>
+                                    {product.description}
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
+
                 {/* Cart button */}
             </div>
         )
@@ -47,9 +56,12 @@ class Shop extends Component {
 
 function mapStateToProps(state){
 
-    const { categories } = state.shop
+    const { categories, filteredProducts } = state.shop
 
-    return { categories };
+    return { 
+        categories,
+        filteredProducts
+    };
 }
 
 Shop = connect(mapStateToProps, actions)(Shop);
