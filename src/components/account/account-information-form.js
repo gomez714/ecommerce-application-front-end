@@ -89,7 +89,24 @@ class AccountInformationForm extends Component {
                     type="password"
                     placeholder="Confirm Password"
                     name="confirm" 
-                    component={FormInput}/>
+                    component={FormInput}/>,
+
+                    <div className="account-information-form-line"></div>,
+                
+                    <Field className='account-information-form-update-information' 
+                    onClick={() => this.setState({ showPasswords: false})}
+                    title="Update Information"
+                    type="submit"
+                    name="update-information" 
+                    component={FormButton}/>,
+
+                    <Field className='account-information-form-cancel' 
+                    onClick={() => this.setState({ showPasswords: false})}
+                    title="Cancel"
+                    type="button"
+                    short={true}
+                    name="cancel" 
+                    component={FormButton}/>
                     ]
                     : 
                     <Field className='account-information-form-change-password' 
@@ -101,6 +118,7 @@ class AccountInformationForm extends Component {
                     component={LongGrayButton}/> 
                 }
 
+                
                 
 
 

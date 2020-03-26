@@ -8,9 +8,10 @@
 
     &-form {
         display: grid;
-        grid-template-rows: [name-s street-address-s] 64px [name-e street-address-e email-s city-s] 64px [email-e city-e state-s zipcode-s change-password-s current-s] 64px [zipcode-e state-e change-password-e current-e new-s] 64px [ new-e confirm-s ] 64px [confirm-e] ;
+        grid-template-rows: [name-s street-address-s] 64px [name-e street-address-e email-s city-s] 64px [email-e city-e state-s zipcode-s change-password-s current-s] 64px [zipcode-e state-e change-password-e current-e new-s] 64px [ new-e confirm-s ] 64px [confirm-e] minmax(20px, 81px) [line-s] 26px [line-e buttons-s] 38px [buttons-e] ;
         grid-template-columns: [s] 1fr [m] 1fr [e];
         grid-row-gap: 15px;
+        margin-bottom: 25px;
     }
 }
 
@@ -85,6 +86,27 @@
         transform: translateY(38px);
     }
 
+    &-line{
+        grid-row: line-s/line-e;
+        grid-column: s/e;
+        border-top: 1px solid #cccccc;
+        margin-bottom: 24px;
+    }
 
+    &-cancel{
+        grid-column: s/m;
+        grid-row: buttons-s/buttons-e;
+
+    }
+
+    &-update-information{
+        grid-row: buttons-s/buttons-e;
+
+        grid-column: s/m;
+        transform: translateX(226px);
+    }
+
+
+    
 
 }
