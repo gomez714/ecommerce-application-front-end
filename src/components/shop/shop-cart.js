@@ -8,10 +8,19 @@ function CartButton({className, icon}) {
     )
 }
 
-function CartContent({ className }){
+function CartContent({ className, products }){
+    let count = products.length;
     return (
         <div className={`${className} cart-content`}>
-            
+            <div className="cart-content-title">
+                Cart ({count})
+            </div>
+            <div className="cart-content-products">
+                
+            </div>
+            <div className="cart-content-footer">
+                
+            </div>
         </div>
     )
 }
@@ -22,7 +31,7 @@ class ShopCart extends Component {
         return(
             <div className={`${className} shop-cart`}>
                 <CartButton className='shop-cart-toggle' icon="fas fa-times"/>
-                <CartContent className='shop-cart-content' />
+                <CartContent className='shop-cart-content' products={[243, 345, 654]}/>
             </div>
         )
     }
