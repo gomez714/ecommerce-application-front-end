@@ -1,4 +1,68 @@
+
+//Place front and back on top of each other
 .shop-product{
+    display: grid;
+    grid-template-columns: 1/-1;
+    grid-template-rows: 1/-1;
+
+    &-front,
+    &-back{
+        grid-row: 1/-1;
+        grid-column: 1/-1;
+    }
+}
+
+
+
+//Card Flip
+.shop-product{
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+
+    &-front,
+    &-back {
+        backface-visibility: hidden;
+        transition: all .3s ease;
+    }
+
+    &-back{
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &-front{
+        transform: rotateY(180deg);
+
+    }
+    &:hover &-back{
+        transform: rotateY(0deg);
+
+    }
+}
+
+.shop-product-front{
+    height: 314px;
+    width: 240px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    &-image{
+
+    }
+
+    &-title{
+        color: #333333;
+        font-size: 18px;
+        font-family: 'Titillium Web';
+    }
+
+    
+}
+
+
+
+
+.shop-product-back{
     height: 314px;
     width: 240px;
     background-color: white;
@@ -8,7 +72,7 @@
     grid-template-rows: 15px [title-s] 30px [title-e description-s] 1fr [description-e price-s] 25px [price-e footer-s] 65px [footer-e] 15px;
     grid-template-columns: 15px [s] 1fr [e] 15px;
     grid-row-gap: 7px;
-    justify-items: start;
+    justify-items: start;    
 
     & > * {
         grid-column: s/e;
