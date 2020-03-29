@@ -59,3 +59,36 @@
         display: grid;
     }
 }
+
+.cart-footer{
+    
+    &-checkout{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        
+        height: 38px;
+        width: 183px;
+        border-radius: 20px;
+        background-color: #00cb79;
+
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 600;
+
+        transition: all .3s ease;
+
+        &:hover{
+            transform: scale(0.97);
+            cursor: pointer;
+        }
+
+        &:active{
+            transform: scale(0.95);
+        }
+
+        &:focus{
+            outline: none;
+        }
+    }
+}
