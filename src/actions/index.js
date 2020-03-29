@@ -6,7 +6,8 @@ import {
 
 import {
     fetchUserPurchases,
-    setPurchaseDetail
+    setPurchaseDetail,
+    fetchCartProducts
 } from './user';
 
 import  {
@@ -22,6 +23,7 @@ export {
     changeNavbarActive,
     fetchUserPurchases,
     setPurchaseDetail,
+    fetchCartProducts,
     fetchShopCategories,
     fetchShopProducts,
     filterProductsWithCategoryId,

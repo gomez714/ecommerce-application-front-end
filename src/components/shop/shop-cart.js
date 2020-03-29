@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
+
+import {connect} from 'react-redux';
+import * as actions from '../../actions';
+
 import CartProduct from '../shop/cart-product';
+import Shop from './shop';
 
 function CartButton({className, icon}) {
     return(
@@ -11,7 +16,7 @@ function CartButton({className, icon}) {
 
 function CartContent({ className, products }){
     let count = products.length;
-    let productsJSX = products.map(product => <CartProduct key={product}/> );
+    let productsJSX = products.map(product => <CartProduct key={product.id}/> );
     return (
         <div className={`${className} cart-content`}>
             <div className="cart-content-title">
@@ -43,15 +48,29 @@ function CartFooter({className, product}){
 }
 
 class ShopCart extends Component {
+    componentDidMount(){
+        this.props.fetchCartProducts();
+    }
+
     render(){
         const { className } = this.props;
         return(
             <div className={`${className} shop-cart`}>
                 <CartButton className='shop-cart-toggle' icon="fas fa-times"/>
-                <CartContent className='shop-cart-content' products={[243, 345, 654, 243, 345, 654, 243, 345, 654, 243, 345, 654]}/>
+                <CartContent className='shop-cart-content' products={this.props.cartProducts}/>
             </div>
         )
     }
+    
 }
+
+function mapStateToProps(state){
+    const { cartProducts } = state.user;
+    return {
+        cartProducts
+    }
+}
+
+ShopCart = connect(mapStateToProps, actions)(ShopCart);
 
 export default ShopCart;
