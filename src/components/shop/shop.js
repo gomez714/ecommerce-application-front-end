@@ -6,8 +6,17 @@ import * as actions from '../../actions';
 import ShopSearchBar from './shop-searchbar';
 import ShopProduct from './shop-product';
 import ShopCart from './shop-cart';
+import CartButton from './cart-button';
 
 class Shop extends Component {
+
+    constructor(){
+        super();
+
+        this.state = {
+            showCart: true
+        }
+    }
 
     componentDidMount(){
         
@@ -36,9 +45,17 @@ class Shop extends Component {
         this.props.filterWithQuery(fields);
     }
 
+    handleAddToCart = () => {
+        if(document.getElementById('shop-cart').classList.contains('cart-hidden')) {
+            document.getElementById('shop-cart').classList.remove('cart-hidden');
+        } else {
+            document.getElementById('shop-cart').classList.add('cart-hidden');
+        }
+    }
+
     render(){
 
-        return <ShopCart className="shop-cart" />
+        // return <ShopCart className="shop-cart" />
 
         return(
             <div className='shop'>
@@ -54,7 +71,8 @@ class Shop extends Component {
                     this.state.showCart ? <ShopCart className='shop-cart' /> : ''
                 }
 
-                
+                <CartButton onClick={this.handleAddToCart} className='shop-cart-button' icon='fas fa-cart-plus' />
+            
             </div>
         )
     }
