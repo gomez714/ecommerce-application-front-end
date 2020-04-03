@@ -4,7 +4,9 @@ import GreenPriceTag from '../green-price-tag';
 
 class CartProduct extends Component {
     render(){
-        const { className, title, quantity, price } = this.props;
+        console.log(this.props);
+        const { className, product, quantity } = this.props;
+        const { title, description, price } = product;
         return(
             <div className={`${className} cart-product`}>
                 <img className='cart-product-image' src='http://via.placeholder.com/130x130'/>
