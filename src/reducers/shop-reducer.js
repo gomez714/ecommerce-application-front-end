@@ -2,7 +2,7 @@ import {
     SET_SHOP_CATEGORIES,
     SET_SHOP_PRODUCTS,
     FILTER_PRODUCTS_WITH_ID,
-    FILTER_PRODUCTS_WITH_QUERY
+    FILTER_PRODUCTS_WITH_QUERY,
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -13,6 +13,7 @@ const INITIAL_STATE = {
 
 export default function( state = INITIAL_STATE, action) {
     switch (action.type) {
+        
         case SET_SHOP_CATEGORIES:
             return {
                 ...state,

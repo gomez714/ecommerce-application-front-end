@@ -1,5 +1,5 @@
 .shop-cart {
-    transition: all .3s ease;
+    transition: all .2s ease-in-out;
 
     display: grid;
     grid-template-rows: [toggle-s] 40px [toggle-e content-s] 1fr [content-e];
@@ -137,5 +137,7 @@
 }
 
 .cart-hidden{
-    transform: translateX(520px);
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    z-index: -1;
 }
