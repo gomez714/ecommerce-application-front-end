@@ -36,7 +36,11 @@ body {
 @import './shop/shop.scss';
 @import './shop/shop-searchbar.scss';
 @import './shop/shop-product.scss';
+
+//Cart
 @import './shop/shop-cart.scss';
+@import './shop/cart-product.scss';
+
 
 @import './quantity.scss';
 @import './green-price-tag.scss';
