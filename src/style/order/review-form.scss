@@ -3,6 +3,7 @@
     &-products{
         grid-column: 1/-1;
         grid-row: products-s/products-e;
+        overflow-y: scroll;
     }
     &-line{
         grid-column: 1/-1;
