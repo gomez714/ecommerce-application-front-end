@@ -2,7 +2,7 @@
     
     &-products{
         grid-column: 1/-1;
-
+        grid-row: products-s/products-e;
     }
     &-line{
         grid-column: 1/-1;
