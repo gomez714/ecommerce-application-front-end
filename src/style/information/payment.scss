@@ -50,4 +50,34 @@
         grid-column: 1/-1;
         justify-self: end;
     }
+    &-shipping-info{
+        grid-row: name-s;
+        grid-column: 1/-1;
+        justify-self: end;
+        transform: translateY(150px);
+    }
+}
+
+.small-text { font-size: 14px;}
+
+.shipping-info{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 24px 24px;
+    width: 240px;
+    height: 150px;
+    grid-row-gap: 5px;
+
+    & > * {
+        grid-column: 1/-1;
+    }
+    &-title{
+
+    }
+    &-name{
+
+    }
+    &-address{
+
+    }
 }
