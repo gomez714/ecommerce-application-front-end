@@ -5,20 +5,44 @@
 }
 
 .info-title{
+    display: grid;
+    grid-template-rows: [s] 1fr [e];
+    grid-template-columns: [s] 1fr [m] 1fr [e];
+    align-items: center;
     &-title{
+        grid-column: s/m;
+        grid-row: s/e;
         font-size: 14px;
     }
 
     &-value{
+        grid-column: m/e;
+        grid-row: s/e;
         color: #00cb79;
         font-weight: 600;
         font-size: 18px;
+        
     }
 }
 
 .info-title-green{
-    &-title{
-        font-weight: 600;
-        color: #00cb79;
+    .info-title{
+        &-title{
+            font-weight: 600;
+            color: #00cb79;
+        }
+    }
+}
+
+.order-summary{
+    display: grid;
+    grid-template-rows: 30px 24px 24px 46px;
+    width: 240px;
+    height: 150px;
+    grid-row-gap: 5px;
+    .info-title{
+        &-value{
+            justify-self: end;
+        }
     }
 }

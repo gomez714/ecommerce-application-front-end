@@ -66,7 +66,7 @@ class ShippingForm extends Component {
                 name="back" 
                 component={FormButton}/>
 
-                <OrderSummary className='shipping-form-summary' />
+                <OrderSummary className='shipping-form-order-summary' />
 
             </form>
         )
