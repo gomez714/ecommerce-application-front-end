@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 
-import ShippingForm from './payment-form';
+import ShippingForm from './shipping-form';
 import PageTitle from '../page-title';
 
 
