@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
 import { reduxForm, Field } from 'redux-form';
-
 import { FormInput, FormButton } from '../form-fields';
-import Details from '../details';
 
+import OrderSummary from './order-summary';
 import history from '../../history';
 
 class ShippingForm extends Component {
@@ -66,6 +65,8 @@ class ShippingForm extends Component {
                 short={true}
                 name="back" 
                 component={FormButton}/>
+
+                <OrderSummary className='shipping-form-summary' />
 
             </form>
         )
