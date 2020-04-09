@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-router",
+  "name": "lgomez-eccommerce-application",
   "version": "1.0.0",
-  "description": "Basic skeleton codebase for React/Redux/Router applications.",
+  "description": "Front-end to GummyCode.com eccomerce application.",
   "scripts": {
     "preinstall": "npm set audit false",
     "start": "webpack-dev-server --config webpack/dev.config.js --watch",
@@ -25,7 +25,7 @@
     "sass",
     "css module"
   ],
-  "author": "Your Name Here",
+  "author": "Luis Gomez",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bottega-code-school/js-builder/issues"
